@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-div">
+        <p class="header" id="header-id">Trending</p>
+        <div class="sub-trends">
+            <div id="id1" onclick="changer()">Popular</div>
+            <div id="id2" onclick="changer1()">Top Gainers</div>
+            <div id="id3" onclick="changer2()">Top Volume</div>
+            <div id="id4" onclick="changer3()">What's New</div>
+        </div>
+        <div>
+            <div class="contents" id="xx1">
+                <div>
+                    <img src="" alt="">
+                    BTC/USDT
+                </div>
+                <div>
+                    20,785.65 <span style="color: gray; font-size: small;">$20,785.65</span>
+                </div>
+                <div style="color: red;">-1.9%</div>
+                <div>$179,330.76
+                    <div style="color: gray; font-size: small;">8,265BTC</div>
+                </div>
+                <div><img src="" alt=""><button class="trade-btn">Trade</button></div>
+            </div>
+            <div id="xx2" style="display: none;">jello</div>
+            <div id="xx3" style="display: none;">yello</div>
+            <div id="xx4" style="display: none;">bello</div>
+        </div>
+    </div>
+
+<script>
+
+const firstdiv = document.getElementById('xx1')
+    const seconddiv = document.getElementById('xx2')
+    const thirddiv = document.getElementById('xx3')
+    const fourthdiv = document.getElementById('xx4')
+const popular = document.getElementById('id1')
+    const topgainers = document.getElementById('id2')
+    const topvolume = document.getElementById('id3')
+    const newthings = document.getElementById('id4')
+    const textId = document.getElementById("header-id")
+    function changer() {
+        textId.innerHTML = "Trending"
+        fourthdiv.style.display = "none"
+        seconddiv.style.display = "none"
+        thirddiv.style.display = "none"
+        firstdiv.style.display = "flex"
+    }
+    function changer1() {
+        textId.innerHTML = "Top Gainers"
+        fourthdiv.style.display = "none"
+        seconddiv.style.display = "flex"
+        thirddiv.style.display = "none"
+        firstdiv.style.display = "none"
+    }
+    function changer2() {
+        textId.innerHTML = "Top Volume"
+        fourthdiv.style.display = "none"
+        seconddiv.style.display = "none"
+        thirddiv.style.display = "flex"
+        firstdiv.style.display = "none"
+    }
+    function changer3() {
+        textId.innerHTML = "What's New"
+        fourthdiv.style.display = "flex"
+        seconddiv.style.display = "none"
+        thirddiv.style.display = "none"
+        firstdiv.style.display = "none"
+    }
+
+</script>
+</body>
+</html>
